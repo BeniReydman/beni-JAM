@@ -11,7 +11,6 @@ Live product links from **Beni Reydman** / [JAM Digital Solutions](https://jamdi
 ### 1. StackDepot
 Infrastructure as code. Diagram to deploy, Aqueduct provisioning, CornerStone starter.
 
-- Demo: https://stackdepot.com/demo/
 - Site: https://stackdepot.com
 
 ### 2. Lightbulb
@@ -27,10 +26,11 @@ Gamified fitness and nutrition app. Reward logic under concurrency. Tens of thou
 - App Store: https://apps.apple.com/us/app/amino-ai-calorie-tracker/id6670493968
 
 ### 4. LinkPerks
-Closed insurance ecosystem for partner perks and redemptions. Terraform → AWS CDK, Keycloak auth, reward flows.
+LinkWell perks and redemptions for clients, teams, and vendor partners. Terraform → AWS CDK, Keycloak auth, reward flows.
 
-- Partner gated (no public consumer login)
-- Walkthrough: beni@jamdigitalsolutions.com
+- Site: https://linkwell.ca/linkperks/
+- App Store: https://apps.apple.com/ca/app/linkperks/id6758523766
+- Google Play: https://play.google.com/store/apps/details?id=com.linkwell&hl=en_CA
 
 ### 5. JAM Digital Solutions
 Studio home for fractional CTO and senior development work.
