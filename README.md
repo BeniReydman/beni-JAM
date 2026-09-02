@@ -1,6 +1,6 @@
-# JAM · Product demos
+# JAM · Public products
 
-Live product links from **Beni Reydman** / [JAM Digital Solutions](https://jamdigitalsolutions.com).
+A small collection of publicly available products and projects I helped build and ship, from **Beni Reydman** / [JAM Digital Solutions](https://jamdigitalsolutions.com).
 
 **Site:** [benireydman.github.io/beni-JAM](https://benireydman.github.io/beni-JAM/)
 
@@ -43,4 +43,4 @@ Studio home for fractional CTO and senior development work.
 
 - Email: beni@jamdigitalsolutions.com
 - LinkedIn: https://linkedin.com/in/benireydman
-- GitHub: https://github.com/BeniReydman
+- JAM: https://jamdigitalsolutions.com
