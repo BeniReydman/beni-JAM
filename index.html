@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JAM · Product demos</title>
+  <meta name="description" content="Live product demos from Beni Reydman / JAM Digital Solutions: StackDepot, Lightbulb, Amino, LinkPerks, and the JAM site." />
+  <meta property="og:title" content="JAM · Product demos" />
+  <meta property="og:description" content="Five shipped products. Links you can click." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="hero">
+    <p class="brand">JAM</p>
+    <h1>Products I shipped.</h1>
+    <p class="lede">Five live demos from JAM Digital Solutions and my own startups. Built and still owned in production.</p>
+    <p class="meta">
+      <a href="https://jamdigitalsolutions.com">jamdigitalsolutions.com</a>
+      ·
+      <a href="https://linkedin.com/in/benireydman">LinkedIn</a>
+      ·
+      <a href="https://github.com/BeniReydman">GitHub</a>
+    </p>
+  </header>
+
+  <main>
+    <article class="product" id="stackdepot" style="--accent: #e8a54b">
+      <p class="eyebrow">01 · Founder product</p>
+      <h2>StackDepot</h2>
+      <p class="blurb">Infrastructure as code platform. Diagram to deploy for cloud stacks, with Aqueduct for provisioning and CornerStone as the enterprise starter.</p>
+      <ul class="tags">
+        <li>TypeScript</li>
+        <li>Pulumi</li>
+        <li>Next.js</li>
+        <li>MCP</li>
+      </ul>
+      <p class="actions">
+        <a class="btn primary" href="https://stackdepot.com/demo/" rel="noopener">Open demo</a>
+        <a class="btn" href="https://stackdepot.com" rel="noopener">Marketing site</a>
+      </p>
+    </article>
+
+    <article class="product" id="lightbulb" style="--accent: #f0d45a">
+      <p class="eyebrow">02 · Founder product</p>
+      <h2>Lightbulb</h2>
+      <p class="blurb">Idea to product builder. Name, brand, site, social, and store flows on AWS Bedrock. Used by thousands of people.</p>
+      <ul class="tags">
+        <li>Python</li>
+        <li>Bedrock</li>
+        <li>Django</li>
+        <li>Keycloak</li>
+      </ul>
+      <p class="actions">
+        <a class="btn primary" href="https://lightbulbapp.com" rel="noopener">Open product</a>
+        <a class="btn" href="https://trylightbulb.com" rel="noopener">Landing</a>
+      </p>
+    </article>
+
+    <article class="product" id="amino" style="--accent: #5ecf9a">
+      <p class="eyebrow">03 · Client product</p>
+      <h2>Amino</h2>
+      <p class="blurb">Gamified fitness and nutrition app. Reward logic for streaks, ad watches, and gift cards under real concurrency. Tens of thousands of downloads.</p>
+      <ul class="tags">
+        <li>Django</li>
+        <li>Celery</li>
+        <li>Redis</li>
+        <li>PostgreSQL</li>
+      </ul>
+      <p class="actions">
+        <a class="btn primary" href="https://aminoapp.com" rel="noopener">Website</a>
+        <a class="btn" href="https://apps.apple.com/us/app/amino-ai-calorie-tracker/id6670493968" rel="noopener">App Store</a>
+      </p>
+    </article>
+
+    <article class="product" id="linkperks" style="--accent: #6eb6e8">
+      <p class="eyebrow">04 · Client product</p>
+      <h2>LinkPerks</h2>
+      <p class="blurb">Closed insurance ecosystem for partner perks and redemptions. Auth, reward logic, and a Terraform to AWS CDK migration with tests on the critical paths.</p>
+      <ul class="tags">
+        <li>Django</li>
+        <li>AWS CDK</li>
+        <li>Keycloak</li>
+        <li>Docker</li>
+      </ul>
+      <p class="actions">
+        <a class="btn primary" href="mailto:beni@jamdigitalsolutions.com?subject=LinkPerks%20demo">Request a walkthrough</a>
+        <a class="btn" href="https://jamdigitalsolutions.com" rel="noopener">Via JAM</a>
+      </p>
+      <p class="note">Partner gated. No public consumer login. Happy to walk through architecture and flows on a call.</p>
+    </article>
+
+    <article class="product" id="jam" style="--accent: #f2a07a">
+      <p class="eyebrow">05 · Studio</p>
+      <h2>JAM Digital Solutions</h2>
+      <p class="blurb">My studio site. Fractional CTO and senior development for client products. The home base for the work above.</p>
+      <ul class="tags">
+        <li>Web</li>
+        <li>Mobile</li>
+        <li>Cloud</li>
+        <li>AI</li>
+      </ul>
+      <p class="actions">
+        <a class="btn primary" href="https://jamdigitalsolutions.com" rel="noopener">Open site</a>
+        <a class="btn" href="mailto:beni@jamdigitalsolutions.com">Email Beni</a>
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Beni Reydman · Winnipeg · Canada remote</p>
+    <p><a href="https://github.com/BeniReydman/beni-JAM">Source on GitHub</a></p>
+  </footer>
+
+  <script>
+    // ponytail: light entrance only, no framework
+    const items = document.querySelectorAll('.hero, .product');
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) e.target.classList.add('in');
+    }, { threshold: 0.12 });
+    items.forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
