@@ -1,9 +1,11 @@
 :root {
-  --bg: #0f1412;
-  --bg2: #171d1a;
-  --ink: #f4efe6;
-  --muted: #a8b0a9;
-  --line: rgba(244, 239, 230, 0.12);
+  --bg: #0d0b12;
+  --bg2: #13101c;
+  --ink: #ebe8f5;
+  --muted: #7a6fa0;
+  --purple: #a882e8;
+  --purple-deep: #7c5cbf;
+  --line: rgba(168, 130, 232, 0.18);
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "Sora", ui-sans-serif, system-ui, sans-serif;
 }
@@ -18,9 +20,9 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   background:
-    radial-gradient(1200px 700px at 12% -10%, rgba(232, 165, 75, 0.18), transparent 55%),
-    radial-gradient(900px 600px at 90% 8%, rgba(94, 207, 154, 0.12), transparent 50%),
-    linear-gradient(180deg, #121816 0%, var(--bg) 40%, #0c100e 100%);
+    radial-gradient(1000px 520px at 50% -8%, rgba(168, 130, 232, 0.22), transparent 55%),
+    radial-gradient(800px 480px at 90% 12%, rgba(124, 92, 191, 0.14), transparent 50%),
+    linear-gradient(180deg, #13101c 0%, var(--bg) 45%, #0a0810 100%);
   line-height: 1.5;
 }
 
@@ -28,25 +30,22 @@ body {
   pointer-events: none;
   position: fixed;
   inset: 0;
-  opacity: 0.045;
+  opacity: 0.04;
   z-index: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-.hero, main, footer { position: relative; z-index: 1; }
+.hero, main, footer, .cta { position: relative; z-index: 1; }
 
 .hero {
-  box-sizing: border-box;
-  max-height: 25vh;
-  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1.25rem 1.5rem 1rem;
+  padding: clamp(2rem, 5vw, 3.25rem) clamp(1.5rem, 5vw, 3rem) clamp(1.75rem, 4vw, 2.5rem);
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(10px);
   transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
@@ -55,45 +54,47 @@ body {
   transform: none;
 }
 
-.brand {
-  margin: 0 0 0.35rem;
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  background: linear-gradient(120deg, #f4efe6 20%, #e8a54b 55%, #5ecf9a 95%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: brand-shift 10s ease-in-out infinite alternate;
+.logo-link {
+  display: inline-flex;
+  text-decoration: none;
 }
 
-@keyframes brand-shift {
-  from { filter: hue-rotate(0deg); }
-  to { filter: hue-rotate(12deg); }
+.logo {
+  width: clamp(160px, 28vw, 220px);
+  height: auto;
+  display: block;
+}
+
+.person {
+  margin: 1rem 0 0;
+  color: var(--purple);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .hero h1 {
-  margin: 0;
-  max-width: 40rem;
+  margin: 0.85rem 0 0;
+  max-width: 38rem;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(1.05rem, 2.1vw, 1.35rem);
-  line-height: 1.35;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.45rem, 3.4vw, 2.15rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
 }
 
 .lede {
-  margin: 0.4rem 0 0;
+  margin: 0.75rem 0 0;
   max-width: 36rem;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
 }
 
 .meta {
-  margin: 0.55rem 0 0;
+  margin: 1rem 0 0;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.92rem;
 }
 
 .meta a {
@@ -102,16 +103,18 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
-.meta a:hover { border-bottom-color: #e8a54b; }
+.meta a:hover { border-bottom-color: var(--purple); color: var(--purple); }
 
 main {
-  padding: 0 clamp(2rem, 6vw, 5rem) clamp(4rem, 8vw, 6rem);
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem) clamp(2.5rem, 5vw, 3.5rem);
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .product {
-  padding: clamp(1.5rem, 3vw, 2.25rem) 0;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem) 0;
   border-top: 1px solid var(--line);
   opacity: 0;
   transform: translateY(22px);
@@ -126,12 +129,11 @@ main {
 .product:nth-child(2) { transition-delay: 0.05s; }
 .product:nth-child(3) { transition-delay: 0.1s; }
 .product:nth-child(4) { transition-delay: 0.15s; }
-.product:nth-child(5) { transition-delay: 0.2s; }
 
 .eyebrow {
-  margin: 0 0 0.65rem;
-  color: var(--accent);
-  font-size: 0.78rem;
+  margin: 0 0 0.7rem;
+  color: var(--accent, var(--purple));
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -141,78 +143,70 @@ main {
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(2.1rem, 4.8vw, 3.1rem);
   letter-spacing: -0.02em;
 }
 
 .blurb {
-  margin: 0.85rem 0 0;
+  margin: 0.9rem 0 0;
   max-width: 40rem;
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 1.1rem 0 0;
+  gap: 0.5rem;
+  margin: 1.15rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .tags li {
-  padding: 0.28rem 0.65rem;
+  padding: 0.35rem 0.75rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--ink);
-  font-size: 0.78rem;
-  opacity: 0.85;
+  font-size: 0.82rem;
+  opacity: 0.9;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  margin: 1.35rem 0 0;
+  gap: 0.7rem;
+  margin: 1.4rem 0 0;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 0.7rem 1.05rem;
+  padding: 0.8rem 1.15rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--ink);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
-  border-color: var(--accent, #e8a54b);
+  border-color: var(--accent, var(--purple));
+  color: var(--purple);
   transform: translateY(-1px);
 }
 
 .btn.primary {
-  background: color-mix(in srgb, var(--accent) 22%, transparent);
-  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
-}
-
-.note {
-  margin: 0.9rem 0 0;
-  max-width: 36rem;
-  color: var(--muted);
-  font-size: 0.86rem;
+  background: color-mix(in srgb, var(--accent, var(--purple)) 22%, transparent);
+  border-color: color-mix(in srgb, var(--accent, var(--purple)) 55%, var(--line));
 }
 
 .cta {
-  position: relative;
-  z-index: 1;
   display: flex;
   justify-content: center;
-  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2.5rem);
+  padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.25rem, 4vw, 2.5rem) clamp(2.5rem, 5vw, 3.5rem);
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.55s ease, transform 0.55s ease;
@@ -224,69 +218,69 @@ main {
 }
 
 .cta-inner {
-  width: min(44rem, 100%);
+  width: min(52rem, 100%);
   margin: 0 auto;
-  padding: clamp(1.75rem, 4vw, 2.75rem);
+  padding: clamp(2rem, 4.5vw, 3rem);
   text-align: center;
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
+  border-radius: 1.35rem;
   background:
-    radial-gradient(600px 220px at 50% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%),
-    rgba(23, 29, 26, 0.72);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    radial-gradient(640px 240px at 50% 0%, rgba(168, 130, 232, 0.2), transparent 70%),
+    rgba(19, 16, 28, 0.85);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
 .cta .eyebrow {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.9rem;
 }
 
 .cta h2 {
   margin: 0 auto;
-  max-width: 20rem;
+  max-width: 22rem;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
 .cta-lead {
-  margin: 0.85rem auto 0;
-  max-width: 32rem;
+  margin: 0.95rem auto 0;
+  max-width: 34rem;
   color: var(--ink);
-  font-size: clamp(1rem, 2vw, 1.12rem);
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
   line-height: 1.45;
 }
 
 .cta-body {
-  margin: 0.85rem auto 0;
-  max-width: 34rem;
+  margin: 0.95rem auto 0;
+  max-width: 36rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.55;
 }
 
 .cta-points {
   display: grid;
-  gap: 0.85rem;
-  margin: 1.5rem 0 0;
+  gap: 0.9rem;
+  margin: 1.65rem 0 0;
   padding: 0;
   list-style: none;
   text-align: left;
 }
 
 .cta-points li {
-  padding: 0.85rem 1rem;
+  padding: 1rem 1.1rem;
   border: 1px solid var(--line);
-  border-radius: 0.85rem;
-  background: rgba(15, 20, 18, 0.45);
+  border-radius: 0.9rem;
+  background: rgba(13, 11, 18, 0.55);
 }
 
 .cta-points strong {
   display: block;
-  margin-bottom: 0.2rem;
-  color: var(--accent);
-  font-size: 0.78rem;
+  margin-bottom: 0.25rem;
+  color: var(--purple);
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -294,29 +288,20 @@ main {
 
 .cta-points span {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.4;
 }
 
 .cta .actions {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.65rem;
-  margin-top: 1.6rem;
-}
-
-@media (min-width: 700px) {
-  .cta-points {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  margin-top: 1.75rem;
 }
 
 footer {
-  padding: 1.5rem clamp(2rem, 6vw, 5rem) 2.5rem;
+  padding: 1.5rem clamp(2rem, 6vw, 5rem) 2.75rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   text-align: center;
 }
 
@@ -326,10 +311,16 @@ footer a {
   border-bottom: 1px solid var(--line);
 }
 
+@media (min-width: 700px) {
+  .cta-points {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (min-width: 900px) {
   main {
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
+    column-gap: 3.5rem;
   }
 
   .product:nth-child(odd) { padding-right: 1rem; }
@@ -338,5 +329,4 @@ footer a {
 
 @media (prefers-reduced-motion: reduce) {
   .hero, .product, .cta { opacity: 1; transform: none; transition: none; }
-  .brand { animation: none; }
 }

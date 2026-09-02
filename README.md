@@ -1,6 +1,8 @@
-# JAM · Public products
+# JAM Digital Solutions · Public products
 
-A small collection of publicly available products and projects I helped build and ship, from **Beni Reydman** / [JAM Digital Solutions](https://jamdigitalsolutions.com).
+A small collection of publicly available products and projects I helped build and ship.
+
+**Beni Reydman · CTO** · [JAM Digital Solutions](https://jamdigitalsolutions.com)
 
 **Site:** [benireydman.github.io/beni-JAM](https://benireydman.github.io/beni-JAM/)
 
