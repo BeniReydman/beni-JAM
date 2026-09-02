@@ -78,7 +78,7 @@ body {
 }
 
 .logo {
-  width: clamp(88px, 14vw, 120px);
+  width: clamp(72px, 11vw, 96px);
   height: auto;
   display: block;
 }
@@ -343,11 +343,11 @@ footer a {
 
 @media (max-width: 520px) {
   .person {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .logo {
-    width: 78px;
+    width: 68px;
   }
 }
 
