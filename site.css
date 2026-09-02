@@ -1,4 +1,4 @@
-/* cache-bust 2026-09-02c */
+/* cache-bust 2026-09-02d */
 :root {
   --bg: #0f1412;
   --bg2: #171d1a;
@@ -63,6 +63,20 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 7rem;
+}
+
+.portrait {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: clamp(52px, 8vw, 72px);
+  height: clamp(52px, 8vw, 72px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
 }
 
 .person {
@@ -352,7 +366,12 @@ footer a {
 
 @media (max-width: 520px) {
   .topbar {
-    padding: 0 5rem;
+    padding: 0 4.25rem;
+  }
+
+  .portrait {
+    width: 44px;
+    height: 44px;
   }
 
   .person {
