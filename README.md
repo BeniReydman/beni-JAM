@@ -33,9 +33,10 @@ LinkWell perks and redemptions for clients, teams, and vendor partners. Terrafor
 - Google Play: https://play.google.com/store/apps/details?id=com.linkwell&hl=en_CA
 
 ### 5. JAM Digital Solutions
-Studio home for fractional CTO and senior development work.
+Want to see more? Studio site, or reach out about private projects.
 
 - https://jamdigitalsolutions.com
+- Email: beni@jamdigitalsolutions.com
 
 ---
 

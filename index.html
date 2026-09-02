@@ -91,18 +91,11 @@
       </p>
     </article>
 
-    <article class="product" id="jam" style="--accent: #f2a07a">
-      <p class="eyebrow">05 · Studio</p>
-      <h2>JAM Digital Solutions</h2>
-      <p class="blurb">My studio site. Fractional CTO and senior development for client products. The home base for the work above.</p>
-      <ul class="tags">
-        <li>Web</li>
-        <li>Mobile</li>
-        <li>Cloud</li>
-        <li>AI</li>
-      </ul>
+    <article class="cta" id="jam" style="--accent: #f2a07a">
+      <p class="eyebrow">Want to see more?</p>
+      <h2>Check out the studio website, or reach out to Beni to hear about the private projects.</h2>
       <p class="actions">
-        <a class="btn primary" href="https://jamdigitalsolutions.com" rel="noopener">Open site</a>
+        <a class="btn primary" href="https://jamdigitalsolutions.com" rel="noopener">JAM Digital Solutions</a>
         <a class="btn" href="mailto:beni@jamdigitalsolutions.com">Email Beni</a>
       </p>
     </article>
@@ -110,12 +103,11 @@
 
   <footer>
     <p>Beni Reydman · Winnipeg · Canada remote</p>
-    <p><a href="https://github.com/BeniReydman/beni-JAM">Source on GitHub</a></p>
   </footer>
 
   <script>
     // ponytail: light entrance only, no framework
-    const items = document.querySelectorAll('.hero, .product');
+    const items = document.querySelectorAll('.hero, .product, .cta');
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) if (e.isIntersecting) e.target.classList.add('in');
     }, { threshold: 0.12 });
